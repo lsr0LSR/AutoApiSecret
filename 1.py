@@ -69,13 +69,28 @@ def main():
             print('8调用成功'+str(num1)+'次')
         if req.get(r'https://api.powerbi.com/v1.0/myorg/apps',headers=headers).status_code == 200:
             num1+=1
-            print('8调用成功'+str(num1)+'次') 
+            print('9调用成功'+str(num1)+'次') 
         if req.get(r'https://graph.microsoft.com/v1.0/me/mailFolders',headers=headers).status_code == 200:
             num1+=1
-            print('9调用成功'+str(num1)+'次')
+            print('10调用成功'+str(num1)+'次')
         if req.get(r'https://graph.microsoft.com/v1.0/me/outlook/masterCategories',headers=headers).status_code == 200:
             num1+=1
-            print('10调用成功'+str(num1)+'次')
+            print('11调用成功'+str(num1)+'次')
+        if req.get(r'https://graph.microsoft.com/v1.0/me/',headers=headers).status_code == 200:
+            num1+=1
+            print('12调用成功'+str(num1)+'次')
+        if req.get(r'https://graph.microsoft.com/v1.0/groups',headers=headers).status_code == 200:
+            num1+=1
+            print('13调用成功'+str(num1)+'次')
+        if req.get(r'https://graph.microsoft.com/v1.0/me/contacts',headers=headers).status_code == 200:
+            num1+=1
+            print('14调用成功'+str(num1)+'次') 
+        if req.get(r'https://graph.microsoft.com/v1.0/me/drive/recent',headers=headers).status_code == 200:
+            num1+=1
+            print('15调用成功'+str(num1)+'次')
+        if req.get(r'https://graph.microsoft.com/v1.0/me/drive/sharedWithMe',headers=headers).status_code == 200:
+            num1+=1
+            print('16调用成功'+str(num1)+'次')
             print('此次运行结束时间为 :', localtime)
     except:
         print("pass")
